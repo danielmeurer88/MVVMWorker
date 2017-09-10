@@ -1,0 +1,17 @@
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\MainWindow.g.cs
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\App.g.cs
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList_MarkupCompile.cache
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList_MarkupCompile.lref
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\bin\Debug\WorkerList.exe.config
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\bin\Debug\WorkerList.exe
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\bin\Debug\WorkerList.pdb
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\App.baml
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\MainWindow.baml
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList.g.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList.Properties.Resources.resources
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList.exe
+C:\Users\Daniel\Documents\Visual Studio 2017\Projects\WorkerList\WorkerList\obj\Debug\WorkerList.pdb
