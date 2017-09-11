@@ -39,6 +39,6 @@
             
         </ListBox>
         <Button Content="Selektierter Eintrag löschen"/>
-        <Button Content="Eintrag hinzufügen" Click="{local:CallMethod MarkupEx_AddNewWorker}"/>
+        <Button Content="Eintrag hinzufügen" Click="{local:CallMethod MarkupEx_OpenWindowAddNewWorker}"/>
     </StackPanel>
 </Window>
