@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkerList"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <local:DegreeToStringConverter x:Key="degreeToStringConverter"/>
     </Window.Resources>
-    <Grid DataContext="{StaticResource workerViewModel}">
-        <ListBox ItemsSource="{Binding Workers}">
+    <StackPanel DataContext="{StaticResource workerViewModel}">
+        <ListBox ItemsSource="{Binding Workers}" Width="300" Height="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="8">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -19,7 +19,7 @@
                             <TextBlock Text="{Binding Surename}"></TextBlock>
                             <TextBlock Margin="8 0 0 0" Text="{Binding Lastname}"></TextBlock>
                         </StackPanel>
-                        <!-- -->
+                        <!-- Alter, Erfahrung, Abschluss -->
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Alter:"></TextBlock>
                             <TextBlock Margin="8 0 0 0" Text="{Binding Age}"></TextBlock>
@@ -31,13 +31,14 @@
 
                             <TextBlock Text="Abschluss:"></TextBlock>
                             <TextBlock Margin="8 0 0 0" Text="{Binding Degree, Converter={StaticResource degreeToStringConverter}}"></TextBlock>
-                            <Rectangle Margin="5 0 5 0" Width="2" Height="14" Fill="Gray"/>
+                            
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
             
         </ListBox>
-        
-    </Grid>
+        <Button Content="Selektierter Eintrag löschen"/>
+        <Button Content="Eintrag hinzufügen" Click="{local:CallMethod MarkupEx_AddNewWorker}"/>
+    </StackPanel>
 </Window>

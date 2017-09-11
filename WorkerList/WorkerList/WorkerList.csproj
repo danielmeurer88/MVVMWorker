@@ -54,10 +54,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddNewWorkerWindow.xaml.cs">
+      <DependentUpon>AddNewWorkerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DegreeToStringConverter.cs" />
+    <Compile Include="CallMethod.cs" />
     <Compile Include="Worker.cs" />
     <Compile Include="WorkerModel.cs" />
     <Compile Include="WorkerViewModel.cs" />
+    <Page Include="AddNewWorkerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
