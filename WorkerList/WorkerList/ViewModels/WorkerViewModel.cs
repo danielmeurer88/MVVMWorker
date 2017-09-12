@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace WorkerList.ViewModels
 {
@@ -26,12 +27,29 @@ namespace WorkerList.ViewModels
             _workerModel = new WorkerModel();
             Workers = _workerModel.Workers;
 
-            DeleteCommand = new DelegateCommand(DeleteEntry, CanDeleteEntry);
+            DeleteCommand = new DelegateCommand(DeleteEntry,
+                delegate (object parameter)
+                {
+                    Console.WriteLine(" ------------ CanExecute DeleteEntry ------------------- ");
+
+                    if (parameter == null)
+                        return false;
+
+                    ListBox listBox = (ListBox)parameter;
+
+
+                    if (listBox.SelectedItem == null)
+                        return false;
+                    else
+                        return true;
+                }    
+            );
+
         }
 
-        public void DeleteEntry(object sender)
+        public void DeleteEntry(object parameter)
         {
-            ListBox listBox = (ListBox) sender;
+            ListBox listBox = (ListBox) parameter;
             if (listBox.SelectedItem != null)
             {
                 //Worker selw = (Worker)listBox.SelectedItem;
@@ -47,18 +65,9 @@ namespace WorkerList.ViewModels
             
         }
 
-        public bool CanDeleteEntry(object sender)
-        {
-            ListBox listBox = (ListBox)sender;
-
-            if (listBox.SelectedItem == null)
-                return false;
-            else
-                return true;
-        }
-
         public void MarkupEx_OpenWindowAddNewWorker(object sender, EventArgs e)
         {
+
             if (_addNewWorkerWindow == null)
             {
                 _addNewWorkerWindow = new AddNewWorkerWindow();

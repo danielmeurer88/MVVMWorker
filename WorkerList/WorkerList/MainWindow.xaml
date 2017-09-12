@@ -12,7 +12,7 @@
     </Window.Resources>
     <StackPanel DataContext="{StaticResource workerViewModel}">
         <StackPanel Orientation="Horizontal">
-            <ListBox x:Name="workerList" ItemsSource="{Binding Workers}" Width="300" Height="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="8">
+            <ListBox SelectedIndex="0" x:Name="workerList" ItemsSource="{Binding Workers}" Width="300" Height="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="8">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -42,7 +42,7 @@
         </ListBox>
             <Button x:Name="SaveButton" Content="Save (test)" Width="150" Height="60" Click="{local:CallMethod MarkupEx_Save}"/>
         </StackPanel>
-        <Button Margin="5" Content="Selektierter Eintrag löschen" Command="{Binding DeleteCommand}" CommandParameter="{Binding ElementName=workerList}" CommandTarget="{Binding ElementName=workerList}"/>
+        <Button Margin="5" Content="Selektierter Eintrag löschen" CommandParameter="{Binding ElementName=workerList}" Command="{Binding DeleteCommand}" />
         <Button Margin="5" Content="Eintrag hinzufügen" Click="{local:CallMethod MarkupEx_OpenWindowAddNewWorker}"/>
     </StackPanel>
 </Window>
