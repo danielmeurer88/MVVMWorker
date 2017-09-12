@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfWorker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Worker>
-    <Lastname>Kim</Lastname>
-    <Surename>Tuan</Surename>
-    <YearsOfExperience>6</YearsOfExperience>
-    <Age>34</Age>
-    <Degree>Doctorate</Degree>
-  </Worker>
-  <Worker>
     <Lastname>Donovan</Lastname>
     <Surename>Jack</Surename>
     <YearsOfExperience>12</YearsOfExperience>
@@ -27,5 +20,12 @@
     <YearsOfExperience>6</YearsOfExperience>
     <Age>29</Age>
     <Degree>Master</Degree>
+  </Worker>
+  <Worker>
+    <Lastname>Jenicke</Lastname>
+    <Surename>Christoph</Surename>
+    <YearsOfExperience>90</YearsOfExperience>
+    <Age>120</Age>
+    <Degree>Doctorate</Degree>
   </Worker>
 </ArrayOfWorker>

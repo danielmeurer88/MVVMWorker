@@ -14,7 +14,8 @@ namespace WorkerList.ViewModels
 
 
         public ObservableCollection<Worker> Workers { get; set; }
-        WorkerModel _workerModel;
+
+        public DelegateCommand AddWorkerCommand { get; private set; }
 
         public WorkerViewModel ParentViewModel;
 
@@ -57,8 +58,45 @@ namespace WorkerList.ViewModels
 
         public AddWorkerViewModel()
         {
-            _workerModel = new WorkerModel();
-            Workers = _workerModel.Workers;
+
+            AddWorkerCommand = new DelegateCommand(AddWorker, CanExecuteAddWorker);
+        }
+
+        public void AddWorker(object parameter)
+        {
+            int age = int.Parse(NewAge);
+            int ex = int.Parse(NewYearsOfExperience);
+            string sure = NewSurename.ToString();
+            string last = NewLastname.ToString();
+            Degree d = _newdegree;
+
+            Worker newWorker = new Worker() { Lastname = last, Surename = sure, Age = age, YearsOfExperience = ex, Degree = d };
+            ParentViewModel.Workers.Add(newWorker);
+            ParentViewModel.MarkupEx_Save(this, null);
+            MarkupEx_Empty(null, null);
+        }
+
+        public bool CanExecuteAddWorker(object parameter)
+        {
+            if (parameter == null)
+                return false;
+
+            Grid grid = parameter as Grid;
+            object child;
+            TextBox t;
+            int errors = 0;
+
+            for (int i=0; i<grid.Children.Count; i++)
+            {
+                child = grid.Children[i];
+                if(child.GetType() == typeof(TextBox))
+                {
+                    t = child as TextBox;
+                    errors += 0;
+                }
+            }
+
+            return (errors <= 0);
         }
 
         public void MarkupEx_OnClosingWindowAddNewWorker(object sender, EventArgs e)
@@ -84,11 +122,6 @@ namespace WorkerList.ViewModels
             NewSurename = String.Empty;
             NewAge = String.Empty;
             NewYearsOfExperience = String.Empty;
-        }
-
-        public void MarkupEx_Save(object sender, EventArgs e)
-        {
-            _workerModel.Save();
         }
 
     }

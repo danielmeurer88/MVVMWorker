@@ -8,7 +8,7 @@
         Title="Arbeiter hinzufügen" Height="300" Width="300" WindowStartupLocation="CenterScreen"
         DataContext="{StaticResource addWorkerViewModel}"
         Closed="{local:CallMethod MarkupEx_OnClosingWindowAddNewWorker}">
-    <Grid >
+    <Grid x:Name="FormGrid">
         <Grid.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="VerticalAlignment" Value="Center"/>
@@ -55,7 +55,7 @@
             <ComboBoxItem Content="Doktor" DataContext="3"/>
         </ComboBox>
 
-        <Button Grid.Row="5" Grid.Column="1" Content="Erstellen" Margin="8"/>
+        <Button Grid.Row="5" Grid.Column="1" Content="Erstellen" Margin="8" Command="{Binding AddWorkerCommand}" CommandParameter="{Binding ElementName=FormGrid}"/>
 
         <Button Grid.Row="5" Grid.Column="0" Content="Leeren" Margin="8" Click="{local:CallMethod MarkupEx_Empty}"/>
 

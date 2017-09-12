@@ -14,16 +14,19 @@ namespace WorkerList
 
         public event EventHandler CanExecuteChanged;
 
-        public DelegateCommand(Action<object> execute)
-                       : this(execute, null)
+        public DelegateCommand(Action<object> execute) : this(execute, null)
         {
         }
 
-        public DelegateCommand(Action<object> execute,
-                       Predicate<object> canExecute)
+        public DelegateCommand(Action<object> execute, Predicate<object> canExecute)
         {
             _execute = execute;
             _canExecute = canExecute;
+
+            // important, or DeleteCommand won't test regularly if command can be executed
+            // in case of buttons that would mean that .NET won't disable the button automatically
+            if(canExecute != null)
+                CommandManager.RequerySuggested += this.RaiseCanExecuteChanged;
         }
 
         public bool CanExecute(object parameter)
@@ -41,7 +44,7 @@ namespace WorkerList
             _execute(parameter);
         }
 
-        public void OnCanExecuteChanged()
+        public void RaiseCanExecuteChanged(object sender, EventArgs e)
         {
             var handler = CanExecuteChanged;
             if (handler != null)
