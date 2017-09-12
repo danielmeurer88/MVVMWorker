@@ -59,9 +59,11 @@
     </Compile>
     <Compile Include="DegreeToStringConverter.cs" />
     <Compile Include="CallMethod.cs" />
+    <Compile Include="DelegeteCommand.cs" />
+    <Compile Include="ViewModels\AddWorkerViewModel.cs" />
     <Compile Include="Worker.cs" />
     <Compile Include="WorkerModel.cs" />
-    <Compile Include="WorkerViewModel.cs" />
+    <Compile Include="ViewModels\WorkerViewModel.cs" />
     <Page Include="AddNewWorkerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

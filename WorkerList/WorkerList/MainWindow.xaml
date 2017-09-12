@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkerList"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen">
+        Title="Arbeiter" Height="370" Width="525" WindowStartupLocation="CenterScreen"
+        >
     <Window.Resources>
         <local:DegreeToStringConverter x:Key="degreeToStringConverter"/>
     </Window.Resources>
     <StackPanel DataContext="{StaticResource workerViewModel}">
-        <ListBox ItemsSource="{Binding Workers}" Width="300" Height="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="8">
+        <StackPanel Orientation="Horizontal">
+            <ListBox x:Name="workerList" ItemsSource="{Binding Workers}" Width="300" Height="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="8">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -38,7 +40,9 @@
             </ListBox.ItemTemplate>
             
         </ListBox>
-        <Button Content="Selektierter Eintrag löschen"/>
-        <Button Content="Eintrag hinzufügen" Click="{local:CallMethod MarkupEx_OpenWindowAddNewWorker}"/>
+            <Button x:Name="SaveButton" Content="Save (test)" Width="150" Height="60" Click="{local:CallMethod MarkupEx_Save}"/>
+        </StackPanel>
+        <Button Margin="5" Content="Selektierter Eintrag löschen" Command="{Binding DeleteCommand}" CommandParameter="{Binding ElementName=workerList}" CommandTarget="{Binding ElementName=workerList}"/>
+        <Button Margin="5" Content="Eintrag hinzufügen" Click="{local:CallMethod MarkupEx_OpenWindowAddNewWorker}"/>
     </StackPanel>
 </Window>

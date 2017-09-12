@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Xml.Serialization;
 
 namespace WorkerList
@@ -12,34 +13,47 @@ namespace WorkerList
     class WorkerModel
     {
 
-        static ObservableCollection<Worker> _workers;
+        public ObservableCollection<Worker> Workers { get; set; }
 
-        public static ObservableCollection<Worker> GetWorker()
+        string _filename = "test.txt";
+
+        public WorkerModel()
         {
-            ObservableCollection<Worker> col = new ObservableCollection<Worker>();
-            col.Add(new Worker() { Surename="Peter", Lastname="Bido", Age=28, YearsOfExperience=5, Degree=Degree.Bachelor } );
-            col.Add(new Worker() { Surename = "Tuan", Lastname = "Kim", Age = 34, YearsOfExperience = 6, Degree = Degree.Doctorate });
-            col.Add(new Worker() { Surename = "Jack", Lastname = "Donovan", Age = 38, YearsOfExperience = 12, Degree = Degree.Master });
-            col.Add(new Worker() { Surename = "Fritz", Lastname = "Müller", Age = 55, YearsOfExperience = 38, Degree = Degree.None });
-            _workers = col;
-            return col;
+            Workers = WorkerModel.Load(_filename);
         }
 
         /// <summary>
-        /// Saves to an xml file
+        /// Saves the ObservableCollection<Worker> to an xml file
         /// </summary>
-        /// <param name="FileName">File path of the new xml file</param>
-        public void Save(string FileName)
+        public void Save()
         {
-            string filename = Directory.GetCurrentDirectory() + "/" + FileName;
+            string path = Directory.GetCurrentDirectory() + "/" + _filename;
 
-            using (var writer = new System.IO.StreamWriter(filename))
+            using (var writer = new System.IO.StreamWriter(path))
             {
-                var serializer = new XmlSerializer(_workers.GetType());
-                serializer.Serialize(writer, _workers);
+                var serializer = new XmlSerializer(Workers.GetType());
+                serializer.Serialize(writer, Workers);
                 writer.Flush();
             }
         }
+
+        /// <summary>
+        /// Load an object from an xml file
+        /// </summary>
+        /// <param name="filename">string of the file's name</param>
+        /// <returns>ObservableCollection<Worker> created from the xml file</returns>
+        public static ObservableCollection<Worker> Load(string filename)
+        {
+
+            string path = Directory.GetCurrentDirectory() + "/" + filename;
+
+            using (var stream = System.IO.File.OpenRead(path))
+            {
+                var serializer = new XmlSerializer(typeof(ObservableCollection<Worker>));
+                return serializer.Deserialize(stream) as ObservableCollection<Worker>;
+            }
+        }
+
 
     }
 }

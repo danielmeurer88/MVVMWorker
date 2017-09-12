@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfWorker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Worker>
+    <Lastname>Kim</Lastname>
+    <Surename>Tuan</Surename>
+    <YearsOfExperience>6</YearsOfExperience>
+    <Age>34</Age>
+    <Degree>Doctorate</Degree>
+  </Worker>
+  <Worker>
+    <Lastname>Donovan</Lastname>
+    <Surename>Jack</Surename>
+    <YearsOfExperience>12</YearsOfExperience>
+    <Age>38</Age>
+    <Degree>Master</Degree>
+  </Worker>
+  <Worker>
+    <Lastname>Müller</Lastname>
+    <Surename>Fritz</Surename>
+    <YearsOfExperience>38</YearsOfExperience>
+    <Age>55</Age>
+    <Degree>None</Degree>
+  </Worker>
+  <Worker>
+    <Lastname>Maurer</Lastname>
+    <Surename>David</Surename>
+    <YearsOfExperience>6</YearsOfExperience>
+    <Age>29</Age>
+    <Degree>Master</Degree>
+  </Worker>
+</ArrayOfWorker>
