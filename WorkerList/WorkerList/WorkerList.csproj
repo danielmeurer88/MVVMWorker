@@ -60,6 +60,8 @@
     <Compile Include="DegreeToStringConverter.cs" />
     <Compile Include="CallMethod.cs" />
     <Compile Include="DelegeteCommand.cs" />
+    <Compile Include="NoEmptyStringValidator.cs" />
+    <Compile Include="StringPositiveNumberValidator.cs" />
     <Compile Include="ViewModels\AddWorkerViewModel.cs" />
     <Compile Include="Worker.cs" />
     <Compile Include="WorkerModel.cs" />

@@ -28,17 +28,15 @@ namespace WorkerList.ViewModels
             Workers = _workerModel.Workers;
 
             DeleteCommand = new DelegateCommand(DeleteEntry,
-                delegate (object parameter)
-                {
-
-                    if (parameter == null) return false;
+                (object parameter) => {
+                        if (parameter == null) return false;
                     
-                    ListBox listBox = (ListBox)parameter;
-                    if (listBox.SelectedIndex >= 0)
-                        return true;
-                    else
-                        return false;
-                }    
+                        ListBox listBox = (ListBox)parameter;
+                        if (listBox.SelectedIndex >= 0)
+                            return true;
+                        else
+                            return false;
+                    }    
             );
             
 
@@ -49,7 +47,6 @@ namespace WorkerList.ViewModels
             ListBox listBox = (ListBox) parameter;
             if (listBox.SelectedItem != null)
             {
-                //Worker selw = (Worker)listBox.SelectedItem;
                 int index = listBox.SelectedIndex;
                 Workers.RemoveAt(index);
             }

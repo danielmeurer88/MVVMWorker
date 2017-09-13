@@ -15,17 +15,17 @@
     <Degree>None</Degree>
   </Worker>
   <Worker>
-    <Lastname>Maurer</Lastname>
-    <Surename>David</Surename>
-    <YearsOfExperience>6</YearsOfExperience>
-    <Age>29</Age>
-    <Degree>Master</Degree>
-  </Worker>
-  <Worker>
     <Lastname>Jenicke</Lastname>
     <Surename>Christoph</Surename>
     <YearsOfExperience>90</YearsOfExperience>
     <Age>120</Age>
     <Degree>Doctorate</Degree>
+  </Worker>
+  <Worker>
+    <Lastname>Meurer</Lastname>
+    <Surename>Daniel</Surename>
+    <YearsOfExperience>6</YearsOfExperience>
+    <Age>29</Age>
+    <Degree>Master</Degree>
   </Worker>
 </ArrayOfWorker>

@@ -43,10 +43,46 @@
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Erfahrung (Jahre):"/>
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Abschluss:"/>
 
-        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding NewSurename, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding NewLastname, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-        <TextBox Grid.Row="2" Grid.Column="1"  Text="{Binding NewAge, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding NewYearsOfExperience, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        <!--<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding NewSurename, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>-->
+
+        <TextBox Grid.Row="0" Grid.Column="1">
+            <TextBox.Text>
+                <Binding Path="NewSurename" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NoEmptyStringValidator/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1">
+            <TextBox.Text>
+                <Binding Path="NewLastname" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NoEmptyStringValidator/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1">
+            <TextBox.Text>
+                <Binding Path="NewAge" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NoEmptyStringValidator/>
+                        <local:StringPositiveNumberValidator/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1">
+            <TextBox.Text>
+                <Binding Path="NewYearsOfExperience" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:NoEmptyStringValidator/>
+                        <local:StringPositiveNumberValidator/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
 
         <ComboBox Grid.Row="4" Grid.Column="1" SelectedIndex="0" Margin="10 12 10 12" SelectionChanged="{local:CallMethod MarkupEx_DegreeChanged}">
             <ComboBoxItem Content="keinen" DataContext="0"/>

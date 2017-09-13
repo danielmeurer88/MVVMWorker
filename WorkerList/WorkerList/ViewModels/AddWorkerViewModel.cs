@@ -54,6 +54,7 @@ namespace WorkerList.ViewModels
             get { return _age; }
             set { _age = value; OnPropertyChanged("NewAge"); }
         }
+
         #endregion
 
         public AddWorkerViewModel()
