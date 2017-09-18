@@ -5,7 +5,13 @@
              xmlns:localvm="clr-namespace:WorkerList.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
         <localvm:WorkerViewModel x:Key="workerViewModel"/>
         <localvm:AddWorkerViewModel x:Key="addWorkerViewModel"/>
+        <ResourceDictionary x:Key="allDictionaries">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="StylesDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
