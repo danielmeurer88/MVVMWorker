@@ -328,8 +328,6 @@
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Erfahrung (Jahre):"/>
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Abschluss:"/>
 
-        <!--<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding NewSurename, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>-->
-
         <TextBox Grid.Row="0" Grid.Column="1">
             <Binding Path="NewSurename" UpdateSourceTrigger="PropertyChanged">
                 <Binding.ValidationRules>

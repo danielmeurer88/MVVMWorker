@@ -9,12 +9,21 @@ WorkerList
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Daniel\Documents\MVVMWorker\WorkerList\WorkerList\App.xaml
 2408643195
 
 19-1007813472
 14785627315
 AddNewWorkerWindow.xaml;MainWindow.xaml;
+=======
+C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\App.xaml
+3829534156
+
+19-1275814723
+131569487696
+AddNewWorkerWindow.xaml;MainWindow.xaml;StylesDictionary.xaml;
+>>>>>>> 8a316c9c76651f1643341c59edcc4efecb075785
 
 True
 

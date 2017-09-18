@@ -42,6 +42,7 @@ C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList_M
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList_MarkupCompile.lref
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\AddNewWorkerWindow.baml
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\MainWindow.baml
+C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\StylesDictionary.baml
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList.exe
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList.pdb
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\bin\Debug\WorkerList.exe.config
@@ -52,4 +53,3 @@ C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList.g
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList.Properties.Resources.resources
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList.csproj.GenerateResource.Cache
 C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList.csproj.CoreCompileInputs.cache
-C:\Users\nantu\Documents\MVVMWorker\WorkerList\WorkerList\obj\Debug\WorkerList.csprojResolveAssemblyReference.cache
